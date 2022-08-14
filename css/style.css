@@ -1,0 +1,817 @@
+/*Обнуление*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'masquerouge';
+    src: url('../fonts/masquerouge.otf');
+    src: url('../fonts/masquerouge.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    /*Картинка фона*/
+    /*затемнение*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/1644524111_39-na-dache-pro-p-dizain-barbershopa-foto-39.jpg');
+    /*Устанавливает одно фоновое изображение в элементе без его повторений*/
+    background-repeat: no-repeat;
+    /*Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока. То есть по большей стороне картинки*/
+    background-size: cover;
+    /*Делает фоновое изображение элемента неподвижным, а так же устанавливает фоновое изображение относительно окна браузера*/
+    background-attachment: fixed;
+    /*Задает начальное положение фонового изображения,*/
+    background-position: top;
+    font-family: "Roboto-Black";
+    color: rgba(255, 255, 255);
+    
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+@media(max-width:1180px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width:992px) {
+    .container P {
+        max-width: 750px;
+    }
+}
+
+@media (max-width:767px) {
+    .container P {
+        max-width: none;
+    }
+}
+h1 {
+    font-family: masquerouge;
+    font-size: 100px;
+}
+
+.Osnova {
+    font-size: 50px;
+}
+
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/*размер контейнера*/
+.container {
+    max-width: 1180px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 0px 10px;
+}
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    /*w -webkit-transform: translateZ(0);*/
+    
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 41, 41);
+    z-index: 2;
+}
+
+/*вытягиваем наверх контентную часть шапки*/
+.header__body {
+    position: relative;
+
+    display: flex;
+    /*Раскидываем Flex-элементы по сторонам*/
+    justify-content: space-between;
+    /*Ограничиваем по высоте*/
+    height: 100px;
+    /*выстраиваем по горизональное плоскости*/
+    align-items: center;
+}
+
+.header__logo {
+    /*Настраивание размера картинки*/
+    flex: 0 0 80px;
+    /*делаем картинку круглой*/
+    border-radius: 60%;
+    /*Переполняющее содержимое не отображается.*/
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.header__logo img {
+    /*Размер логотипа в %, чтобы картинка подстроилась под размер*/
+    max-width: 100%;
+    /*убираем подрезание лого снизу*/
+    display: block;
+}
+
+.header__burger {}
+
+.header__menu {
+    padding-top: 5px;
+}
+
+.header__list {
+    /*выставляем пунты меню в линию*/
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+/*меню*/
+.header__list li {
+    list-style: none;
+    /*отступы для пунктов меню*/
+    margin: 0px 0px 0px 20px;
+}
+
+.header__link {
+    /*убираем точки меню*/
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.content {
+    /*Опускам текст ниже шапочки. Там было height: 100px
+    padding: 100px 0px 0px 0px;*/
+}
+
+#main:before {
+    display: block;
+    content: " ";
+    margin-top: -75px;
+    height: 75px;
+    visibility: hidden;
+}
+
+.container_0 {
+    margin-top: 250px;
+    margin-bottom: 400px;
+    padding-top: -250px;
+    padding-bottom: -400px;
+}
+
+/*Шрифты текста*/
+.content_text {
+    height: 40vw;
+    position: relative
+}
+
+/*НАДПИСЬ BARBERSHOP BENZIN и надпись СТИЛЬНЫЕ МУЖСКИЕ СТРИЖКИ и БРИТЬЮ, О компании*/
+.content_text h1,
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: -50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*font-size: 4vw;*/
+    /*line-height: 4vw*/
+    
+}
+
+
+
+/**/
+
+
+
+.content_text p {
+    margin: 0px 0px 20px 0px;
+}
+
+@media (max-width: 767px) {
+    .content {
+        padding: 70px, 0px 0px 0px;
+    }
+}
+
+
+
+/*Установка брейкпоинтов для адаптивности*/
+
+/*Рисуем меню бургер*/
+@media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header__body {
+        height: 85px;
+    }
+
+    .header__logo {
+        flex: 0 0 75px
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        /*Плавность*/
+        transition: all 0.3s ease 0s;
+        z-index: 5
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        /*Плавность*/
+        transition: all 0.3s ease 0s;
+        z-index: 5;
+    }
+
+    .header__burger:before {
+        top: 0;
+
+    }
+
+    .header__burger:after {
+        bottom: 0;
+
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+
+    }
+
+    .header__burger.active:before {
+        /*Движение линий*/
+        transform: rotate(45deg);
+        top: 9px;
+
+    }
+
+    .header__burger.active:after {
+        /*Движение линий*/
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        /*Скорость выезда меню*/
+        transition: all 0.5s ease 0s;
+        background-color: rgb(0, 0, 0);
+        /*Отступы для меню в бургере*/
+        padding: 70px 10px 20px 18px;
+    }
+
+    .header__menu.active {
+        top: 0;
+    }
+
+    .header__list {
+        display: block;
+    }
+
+    .header__list li {
+        margin: 0px 0px 20px 0px;
+    }
+
+    .header__link {
+        font-size: 24px;
+    }
+}
+
+/*---*/
+/*Раздел преимущества*/
+
+
+
+.wrapper_1 {
+
+    /*расширяет ширину на все окно*/
+
+    max-width: 100%;
+    /*
+    /**/
+    background-color: rgba(255, 255, 255, 0.795);
+    box-sizing: content-box;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+
+}
+
+.container_1 {
+    max-width: 1180px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding-top: 0px;
+    padding-bottom: 50px;*/
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.preimuschstva {
+    margin-bottom: 30px;
+}
+
+
+pre img {
+    text-align: center
+}
+
+
+/*Вписываем картинку в размер блока*/
+.main div img {
+    width: 100%;
+    height: auto;
+}
+
+div h5 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    ;
+}
+
+
+
+
+
+.wrapper_2 {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 200px 10px;
+
+    /*расширяет ширину на все окно*/
+    box-sizing: content-box;
+    max-width: 100%;
+}
+
+.button_color {
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 41, 41);
+}
+
+
+.container_3 {
+    /*max-width: 1300px;*/
+    margin-top: 100px;
+    margin-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    height: 100%;
+    overflow-x: hidden;
+
+
+}
+
+
+.uslugi {
+    margin-top: 40px;
+
+}
+
+
+
+.wrapper_3 {
+    background-color: rgba(255, 255, 255, 0.76);
+    box-sizing: content-box;
+    max-width: 100%;
+    color: black;
+    overflow-x: hidden;
+    margin-bottom: 500px
+}
+
+.pic {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/*Центрирование надписи и фото*/
+.photos {
+    max-width: 100%;
+    margin: 0px;
+    text-align: center;
+    padding-top: 10px;
+    padding: 5px;
+
+}
+
+/*Вписываем фото в размер*/
+.photo img {
+    width: 90%;
+    height: 90%;
+    border: black;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 10%;
+
+}
+
+.container_4 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    height: 100%;
+
+}
+
+.wrapper_4 {
+    background-color: rgba(255, 255, 255, 0.76);
+    box-sizing: content-box;
+    max-width: 100%;
+    color: black;
+    overflow-x: hidden;
+}
+
+.ramka {
+    margin: 100px 40px;
+    border: 100px solid;
+    background-size: contain;
+    border-image-source: url(../img/light-grey-border.png);
+    border-image-slice: 36;
+    border-image-repeat: round;
+    border-image-outset: 10px;
+    border-width: 20px;
+    padding: 20px
+}
+
+.pic_1 {
+    max-width: 100%;
+    /*отступ таблицы слева и справа*/
+    /*margin-left: 100px;
+    margin-right: 100px;*/
+
+
+}
+
+/*---*/
+.price {}
+
+.price caption {
+    padding-bottom: 5px;
+    padding-left: 1px;
+    padding-top: 1px;
+    color: #0d6efd;
+    font-family: "Lora", serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+
+.price {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 20px
+}
+
+td span {
+    color: rgb(160, 25, 25)
+}
+
+td {
+    border-bottom: dotted;
+    border-bottom-width: 2px;
+}
+
+footer {}
+
+.wrapper_5 {
+
+    /*расширяет ширину на все окно*/
+
+    max-width: 100%;
+    /*
+    /**/
+    background-color: rgba(8, 8, 8, 0.795);
+    box-sizing: content-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.center h3 {
+    font-size: 150px;
+}
+
+.center h5 {
+    font-size: 20px;
+    color: blanchedalmond;
+
+
+}
+
+
+
+/*Активная обратная связь*/
+.active {
+    position: relative fixed;
+}
+
+
+.serukopsa-lebtum {
+    background: #000000;
+    border: 2px solid #dad5d9;
+    border-radius: 50%;
+    box-shadow: 0 8px 10px rgba(56, 53, 55, 0.3);
+    cursor: pointer;
+    height: 70px;
+    text-align: center;
+    width: 70px;
+    position: fixed;
+    left: 3%;
+    bottom: 23%;
+    z-index: 49;
+    transition: .4s;
+    -webkit-animation: email-an linear 1s infinite;
+    animation: email-an linear 1s infinite;
+    position: absolute;
+    left: 90%;
+    transform: translate(-50%);
+
+}
+
+
+
+
+.serukopsa-lebtum .kanatesin-gtisan {
+    height: 70px;
+    width: 66px;
+    border-radius: 95%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.serukopsa-lebtum .kanatesin-gtisan span {
+    text-align: center;
+    color: #000000;
+    opacity: 0;
+    font-size: 0;
+    position: absolute;
+    right: 10px;
+    top: 21px;
+    line-height: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: opacity .4s linear;
+    font-family: 'montserrat', Arial, Helvetica, sans-serif;
+}
+
+
+.serukopsa-lebtum .kanatesin-gtisan:hover span {
+    opacity: 1;
+    font-size: 11px;
+}
+
+.serukopsa-lebtum:hover i {
+    display: none;
+}
+
+.serukopsa-lebtum:hover {
+    z-index: 1;
+    background: rgb(161, 151, 151);
+    transition: .3s;
+}
+
+.serukopsa-lebtum:hover i {
+    color: #38a3fd;
+    font-size: 39px;
+    transition: .4s;
+}
+
+.serukopsa-lebtum i {
+    color: #f3f0f0;
+    font-size: 35px;
+    transition: .5s;
+    line-height: 63px;
+}
+
+.serukopsa-lebtum i {
+    -webkit-animation: opsimple 3s infinite;
+    animation: opsimple 3s infinite;
+}
+
+@-webkit-keyframes email-an {
+    0% {
+        box-shadow: 0 9px 11px rgba(239, 234, 240, 0.3), 0 0 0 0 rgba(235, 226, 236, 0.3), 0 0 0 0 rgba(242, 238, 243, 0.3)
+    }
+
+    40% {
+        box-shadow: 0 9px 11px rgba(242, 235, 243, 0.3), 0 0 0 15px rgba(226, 219, 228, 0.3), 0 0 0 0 rgba(242, 239, 243, 0.3)
+    }
+
+    80% {
+        box-shadow: 0 9px 11px rgba(232, 227, 233, 0.3), 0 0 0 30px rgba(237, 229, 238, 0.3), 0 0 0 26.7px rgba(227, 215, 230, 0.3)
+    }
+
+    100% {
+        box-shadow: 0 9px 11px rgba(225, 219, 226, 0.3), 0 0 0 30px rgba(237, 230, 238, 0.3), 0 0 0 40px rgba(218, 212, 219, 0.3)
+    }
+}
+
+@keyframes email-an {
+    0% {
+        box-shadow: 0 9px 11px rgba(233, 226, 235, 0.3), 0 0 0 0 rgba(228, 217, 230, 0.3), 0 0 0 0 rgba(230, 220, 231, 0.3)
+    }
+
+    40% {
+        box-shadow: 0 9px 11px rgba(228, 222, 230, 0.3), 0 0 0 15px rgba(233, 223, 235, 0.3), 0 0 0 0 rgba(229, 219, 231, 0.3)
+    }
+
+    80% {
+        box-shadow: 0 9px 11px rgba(225, 217, 226, 0.3), 0 0 0 30px rgba(231, 222, 233, 0.3), 0 0 0 26.7px rgba(239, 227, 241, 0.3)
+    }
+
+    100% {
+        box-shadow: 0 8px 10px rgba(229, 219, 231, 0.3), 0 0 0 30px rgba(226, 218, 228, 0.3), 0 0 0 40px rgba(227, 220, 228, 0.3)
+    }
+}
+
+@keyframes opsimple {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes opsimple {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*--*/
+
+
+/*выравнивание по центу*/
+footer {
+    background-color: #000000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.wrapper_6 {
+    margin: 0;
+}
+
+
+.container_6 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+.inline {
+    display: inline-block;
+}
+.container_6 a {
+    display: inline-block;
+    height: 53px;
+    width: 57px;
+    background: #f1f1f1;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 30%;
+    text-align: center;
+}
+a i {
+    color: hsl(0, 0%, 4%);
+    font-size: 40px;
+    margin-top: 5px;
+
+}
+
+
+
+.container_6 .inst a:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);;
+    transition: 1s;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.container_6 .youtube a:hover {
+    background: #c40b04;
+    transition: 1s;
+}
+
+.container_6 .vk a:hover {
+    background: #4680C2;
+    transition: 1s;
+}
+
+.container_6 .telegram a:hover {
+    background: #2AABEE;
+    transition: 1s;
+}
+
+.container_6 a:hover i {
+    color: #080808;
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+
+
+
