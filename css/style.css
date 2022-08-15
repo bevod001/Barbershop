@@ -6,7 +6,6 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-
 }
 
 @font-face {
@@ -210,12 +209,7 @@ h2 {
     /*line-height: 4vw*/
     
 }
-
-
-
 /**/
-
-
 
 .content_text p {
     margin: 0px 0px 20px 0px;
@@ -226,8 +220,6 @@ h2 {
         padding: 70px, 0px 0px 0px;
     }
 }
-
-
 
 /*Установка брейкпоинтов для адаптивности*/
 
@@ -299,7 +291,6 @@ h2 {
         /*Движение линий*/
         transform: rotate(45deg);
         top: 9px;
-
     }
 
     .header__burger.active:after {
@@ -342,8 +333,6 @@ h2 {
 /*---*/
 /*Раздел преимущества*/
 
-
-
 .wrapper_1 {
 
     /*расширяет ширину на все окно*/
@@ -355,8 +344,6 @@ h2 {
     box-sizing: content-box;
     padding-top: 200px;
     padding-bottom: 200px;
-
-
 }
 
 .container_1 {
@@ -380,7 +367,6 @@ pre img {
     text-align: center
 }
 
-
 /*Вписываем картинку в размер блока*/
 .main div img {
     width: 100%;
@@ -393,10 +379,6 @@ div h5 {
     text-align: center;
     ;
 }
-
-
-
-
 
 .wrapper_2 {
     margin-top: 200px;
@@ -415,7 +397,6 @@ div h5 {
     background-color: rgb(43, 41, 41);
 }
 
-
 .container_3 {
     /*max-width: 1300px;*/
     margin-top: 100px;
@@ -425,17 +406,11 @@ div h5 {
     padding: 0px;
     height: 100%;
     overflow-x: hidden;
-
-
 }
-
 
 .uslugi {
     margin-top: 40px;
-
 }
-
-
 
 .wrapper_3 {
     background-color: rgba(255, 255, 255, 0.76);
@@ -459,7 +434,6 @@ div h5 {
     text-align: center;
     padding-top: 10px;
     padding: 5px;
-
 }
 
 /*Вписываем фото в размер*/
@@ -470,7 +444,6 @@ div h5 {
     margin-left: 0px;
     margin-right: 0px;
     border-radius: 10%;
-
 }
 
 .container_4 {
@@ -480,7 +453,6 @@ div h5 {
     margin-right: auto;
     padding: 0px;
     height: 100%;
-
 }
 
 .wrapper_4 {
@@ -508,8 +480,6 @@ div h5 {
     /*отступ таблицы слева и справа*/
     /*margin-left: 100px;
     margin-right: 100px;*/
-
-
 }
 
 /*---*/
@@ -529,14 +499,12 @@ div h5 {
     display: inline-block;
 }
 
-
 .price {
     width: 100%;
     border-collapse: collapse;
 }
 
 tr {
-
     padding-bottom: 20px;
     padding-top: 20px;
     font-size: 20px
@@ -577,13 +545,10 @@ footer {}
 
 }
 
-
-
 /*Активная обратная связь*/
 .active {
     position: relative fixed;
 }
-
 
 .serukopsa-lebtum {
     background: #000000;
@@ -604,11 +569,7 @@ footer {}
     position: absolute;
     left: 90%;
     transform: translate(-50%);
-
 }
-
-
-
 
 .serukopsa-lebtum .kanatesin-gtisan {
     height: 70px;
@@ -616,7 +577,6 @@ footer {}
     border-radius: 95%;
     position: relative;
     overflow: hidden;
-
 }
 
 .serukopsa-lebtum .kanatesin-gtisan span {
@@ -633,7 +593,6 @@ footer {}
     transition: opacity .4s linear;
     font-family: 'montserrat', Arial, Helvetica, sans-serif;
 }
-
 
 .serukopsa-lebtum .kanatesin-gtisan:hover span {
     opacity: 1;
@@ -755,7 +714,6 @@ footer {
     margin: 0;
 }
 
-
 .container_6 {
     position: relative;
     top: 50%;
@@ -780,10 +738,7 @@ a i {
     color: hsl(0, 0%, 4%);
     font-size: 40px;
     margin-top: 5px;
-
 }
-
-
 
 .container_6 .inst a:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);;
